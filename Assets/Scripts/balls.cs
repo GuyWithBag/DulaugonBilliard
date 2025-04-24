@@ -8,6 +8,7 @@ public class balls : MonoBehaviour {
 	public Collider[] obj2; 
 
 	public static int balls_moving = 0;
+	public static bool is_moving = false;	
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,7 @@ public class balls : MonoBehaviour {
 		{
 			if (t != null) 
 			{
-				if (t.velocity != Vector3.zero) {
+				if (t.velocity.magnitude > 1f) {
 					balls_moving++;
 				}
 			}
@@ -33,11 +34,13 @@ public class balls : MonoBehaviour {
 
 		if (balls_moving > 0) {
 
-			Debug.Log (balls_moving + "ball/s moving");
+			// Debug.Log (balls_moving + "ball/s moving");
+			is_moving = true;	
 		} 
 		else 
 		{
-			Debug.Log ("No balls moving");
+			// Debug.Log ("No balls moving");
+			is_moving = false;	
 		}
 
 	}
