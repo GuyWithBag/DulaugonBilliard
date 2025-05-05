@@ -32,6 +32,9 @@ public class Timer : MonoBehaviour
     // Converts time in seconds to "00:00:00" format
     private void UpdateTimerDisplay()
     {
+        if (!timerText) {
+            return;
+        }
         int hours = Mathf.FloorToInt(currentTime / 3600);
         int minutes = Mathf.FloorToInt((currentTime % 3600) / 60);
         int seconds = Mathf.FloorToInt(currentTime % 60);

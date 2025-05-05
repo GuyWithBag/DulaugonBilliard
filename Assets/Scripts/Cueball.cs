@@ -15,6 +15,7 @@ public class Cueball : MonoBehaviour
 	private float rotationSpeed = 50f;
 	bool isFiring = false;
 	public Timer fireCooldown;
+	public GameObject objectCollider;
 
 	// Use this for initialization
 	void Start()
@@ -43,12 +44,20 @@ public class Cueball : MonoBehaviour
 		// 	}
 		// }
 		// Debug.Log(balls.is_moving);
-		if (balls.is_moving) {
+		Vector3 myVector = gameObject.GetComponent<Rigidbody>().velocity;
+		Debug.Log(myVector);
+		if (myVector.x != 0 && myVector.y != 0 && myVector.z != 0) {
 			Disable(true);
+			
+		} else {
+			Disable(false);
+		}
+		
+
+		if (balls.is_moving) {
 			ResetStick();
 			return;
 		}
-		Disable(false);
 
 		if (ScrollSpeed <= 2500) 
 		{
@@ -84,9 +93,9 @@ public class Cueball : MonoBehaviour
 	{
 		stick.transform.position = originalPositionObject.transform.position;
 		stick.transform.rotation = originalPositionObject.transform.rotation;
-		Disable(false);
 		rb.velocity = Vector3.zero; // Stop linear movement
         rb.angularVelocity = Vector3.zero; // Stop rotation
+		// Disable(false);
 		// Debug.Log("WHYY");
 	}
 
@@ -116,16 +125,17 @@ public class Cueball : MonoBehaviour
 		if (value) {
 			// Make the Cueball invisible
 			stick.GetComponent<MeshRenderer>().enabled = false;
+			objectCollider.GetComponent<MeshRenderer>().enabled = false;
 			// Disable physics
-			stick.GetComponent<Collider>().enabled = false;
+			objectCollider.GetComponent<Collider>().enabled = false;
 			// Disable the Rigidbody
 			rb.isKinematic = true;
 			return;
 		}
-		// Make the Cueball invisible
 		stick.GetComponent<MeshRenderer>().enabled = true;
+		objectCollider.GetComponent<MeshRenderer>().enabled = true;
 		// Disable physics
-		stick.GetComponent<Collider>().enabled = true;
+		objectCollider.GetComponent<Collider>().enabled = true;
 		// Disable the Rigidbody
 		rb.isKinematic = true;
 	}
