@@ -44,4 +44,49 @@
     </ended>
     <life_left>4</life_left>
   </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::2156:ef0b:5192:8bc6</ipaddress>
+    <started>4/30/2025 6:39:17 PM</started>
+    <ended>
+    </ended>
+    <life_left>4</life_left>
+  </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::2156:ef0b:5192:8bc6</ipaddress>
+    <started>4/30/2025 6:46:52 PM</started>
+    <ended>
+    </ended>
+    <life_left>4</life_left>
+  </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::2156:ef0b:5192:8bc6</ipaddress>
+    <started>4/30/2025 6:48:57 PM</started>
+    <ended>
+    </ended>
+    <life_left>5</life_left>
+  </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::2156:ef0b:5192:8bc6</ipaddress>
+    <started>4/30/2025 7:02:06 PM</started>
+    <ended>
+    </ended>
+    <life_left>4</life_left>
+  </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::2156:ef0b:5192:8bc6</ipaddress>
+    <started>4/30/2025 7:02:18 PM</started>
+    <ended>
+    </ended>
+    <life_left>4</life_left>
+  </user>
 </user>

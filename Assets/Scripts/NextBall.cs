@@ -97,16 +97,7 @@ public class NextBall : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if (collision.gameObject.CompareTag ("Cue Ball")) {
 			gemScript.ShowNumbers (0);
-
-			// collision.gameObject.GetComponent<ConstantForce> ().enabled = false;
-			// // Make the stick invisible
-			// collision.gameObject.GetComponent<MeshRenderer>().enabled = true;
-			// // Disable physics
-			// collision.gameObject.GetComponent<Collider>().enabled = true;
-			// // Disable the Rigidbody
-			// collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-
-			collision.gameObject.transform.position = new Vector3(0.693f, -0.194f, -6.453f);
+			Cueball.ResetCueballPosition(collision.gameObject);
 
 		}
 		if (collision.gameObject.CompareTag ("1")) {
