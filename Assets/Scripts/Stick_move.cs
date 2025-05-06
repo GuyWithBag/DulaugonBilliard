@@ -62,8 +62,8 @@ public class Stick_move : MonoBehaviour {
 		// Vector3 directionToMarker = arUcoPoseReceiver.transform.position - cueBall.transform.position;
 		
 		// Print ArUco marker position
-		Debug.Log("ArUco Position: " + arUcoPoseReceiver.transform.position);
-		Debug.Log("ArUco Rotation: " + arUcoPoseReceiver.transform.rotation.eulerAngles);
+		// Debug.Log("ArUco Position: " + arUcoPoseReceiver.transform.position);
+		// Debug.Log("ArUco Rotation: " + arUcoPoseReceiver.transform.rotation.eulerAngles);
 		transform.rotation = arUcoPoseReceiver.transform.rotation;
 		// Only rotate if we have a valid direction
 		//if (directionToMarker.magnitude > 0.1f)

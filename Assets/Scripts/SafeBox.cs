@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SafeBox : MonoBehaviour {
-
+	public NextBall nextBall; 
 	// Use this for initialization
 	void Start () {
 		
@@ -23,5 +23,7 @@ public class SafeBox : MonoBehaviour {
 		if (collision.gameObject && collision.gameObject.GetComponent<SafeBox>()) {
 			Destroy(collision.gameObject);
 		}
+
+		nextBall.OnCollisionDo(collision.gameObject);
 	}
 }

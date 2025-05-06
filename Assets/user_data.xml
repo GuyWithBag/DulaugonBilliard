@@ -89,4 +89,22 @@
     </ended>
     <life_left>4</life_left>
   </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::788a:e14e:9074:6efc</ipaddress>
+    <started>5/6/2025 8:16:45 AM</started>
+    <ended>
+    </ended>
+    <life_left>6</life_left>
+  </user>
+  <user>
+    <name>Administrator</name>
+    <hostname>WIN-OJJV0RLJ3QG</hostname>
+    <ipaddress>fe80::788a:e14e:9074:6efc</ipaddress>
+    <started>5/6/2025 8:18:04 AM</started>
+    <ended>
+    </ended>
+    <life_left>9</life_left>
+  </user>
 </user>

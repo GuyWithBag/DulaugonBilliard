@@ -94,13 +94,8 @@ public class NextBall : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.CompareTag ("Cue Ball")) {
-			gemScript.ShowNumbers (0);
-			Cueball.ResetCueballPosition(collision.gameObject);
-
-		}
-		if (collision.gameObject.CompareTag ("1")) {
+	public void OnCollisionDo(GameObject obj) {
+		if (obj.gameObject.CompareTag ("1")) {
 			GameFlow.balls [0] = 0;
 			gemScript.ShowNumbers (1);
 			Ball1.enabled = true;
@@ -108,56 +103,56 @@ public class NextBall : MonoBehaviour {
 			DestroyObjectWithTag ("1");
 			SaveXML.save_now = true;
 		}
-		else if (collision.gameObject.CompareTag ("2")) {
+		else if (obj.gameObject.CompareTag ("2")) {
 			GameFlow.balls [1] = 0;
 			gemScript.ShowNumbers (2);
 			Ball2.enabled = true;
 			twoText.enabled = true; 
 			DestroyObjectWithTag ("2");
 		}
-		else if(collision.gameObject.CompareTag ("3")) {
+		else if(obj.gameObject.CompareTag ("3")) {
 			GameFlow.balls [2] = 0;
 			gemScript.ShowNumbers (3);
 			Ball3.enabled = true;
 			threeText.enabled = true; 
 			DestroyObjectWithTag ("3");
 		}
-		else if (collision.gameObject.CompareTag ("4")) {
+		else if (obj.gameObject.CompareTag ("4")) {
 			GameFlow.balls [3] = 0;
 			gemScript.ShowNumbers (4);
 			Ball4.enabled = true;
 			fourText.enabled = true; 
 			DestroyObjectWithTag ("4");
 		}
-		else if (collision.gameObject.CompareTag ("5")) {
+		else if (obj.gameObject.CompareTag ("5")) {
 			GameFlow.balls [4] = 0;
 			gemScript.ShowNumbers (5);
 			Ball5.enabled = true;
 			fiveText.enabled = true; 
 			DestroyObjectWithTag ("5");
 		}
-		else if (collision.gameObject.CompareTag ("6")) {
+		else if (obj.gameObject.CompareTag ("6")) {
 			GameFlow.balls [5] = 0;
 			gemScript.ShowNumbers (6);
 			Ball6.enabled = true;
 			sixText.enabled = true;
 			DestroyObjectWithTag ("6");
 		}
-		else if (collision.gameObject.CompareTag ("7")) {
+		else if (obj.gameObject.CompareTag ("7")) {
 			GameFlow.balls [6] = 0;
 			gemScript.ShowNumbers (7);
 			Ball7.enabled = true;
 			sevenText.enabled = true;
 			DestroyObjectWithTag ("7");
 		}
-		else if (collision.gameObject.CompareTag ("8")) {
+		else if (obj.gameObject.CompareTag ("8")) {
 			GameFlow.balls [7] = 0;
 			gemScript.ShowNumbers (8);
 			Ball8.enabled = true;
 			eightText.enabled = true;
 			DestroyObjectWithTag ("8");
 		}
-		else if (collision.gameObject.CompareTag ("9")) {
+		else if (obj.gameObject.CompareTag ("9")) {
 			GameFlow.balls [8] = 0;
 			gemScript.ShowNumbers (9);
 			Ball9.enabled = true;
@@ -166,6 +161,15 @@ public class NextBall : MonoBehaviour {
 		}
 
 		PrintBallsArray();
+	}
+
+	void OnCollisionEnter(Collision collision){
+		if (collision.gameObject.CompareTag ("Cue Ball")) {
+			gemScript.ShowNumbers (0);
+			Cueball.ResetCueballPosition(collision.gameObject);
+
+		}
+		OnCollisionDo(collision.gameObject);
 	}
 		
 }

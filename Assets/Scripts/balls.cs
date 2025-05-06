@@ -25,7 +25,7 @@ public class balls : MonoBehaviour {
 		{
 			if (t != null) 
 			{
-				if (t.velocity.magnitude > 1f) {
+				if (t.velocity.magnitude > 0.01f) {
 					balls_moving++;
 				}
 			}

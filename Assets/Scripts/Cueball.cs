@@ -44,15 +44,21 @@ public class Cueball : MonoBehaviour
 		// 	}
 		// }
 		// Debug.Log(balls.is_moving);
-		Vector3 myVector = gameObject.GetComponent<Rigidbody>().velocity;
-		Debug.Log(myVector);
-		if (myVector.x != 0 && myVector.y != 0 && myVector.z != 0) {
+		// Vector3 myVector = gameObject.GetComponent<Rigidbody>().velocity;
+		// Debug.Log(myVector);
+		// if (myVector.x != 0 && myVector.y != 0 && myVector.z != 0) {
+		// 	Disable(true);
+			
+		// } else {
+		// 	Disable(false);
+		// }
+		
+		if (balls.is_moving) {
 			Disable(true);
 			
 		} else {
 			Disable(false);
 		}
-		
 
 		if (balls.is_moving) {
 			ResetStick();
