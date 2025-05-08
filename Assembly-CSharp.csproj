@@ -66,8 +66,6 @@
      <Compile Include="Assets\Scripts\gems.cs" />
      <Compile Include="Assets\Scripts\scrollbar.cs" />
      <Compile Include="Assets\Scripts\stick.cs" />
-     <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\LookCamera.cs" />
-     <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
      <None Include="Assets\Audience\BodyGuards\ReadMe.txt.txt" />
      <None Include="Assets\Gems Ultimate Pack\spritefont_and_other\document_and_picturelist\readme.txt" />
      <None Include="Assets\user_data.xml" />
